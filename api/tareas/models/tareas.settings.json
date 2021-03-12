@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tareas",
+  "info": {
+    "name": "Tareas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    }
+  }
+}

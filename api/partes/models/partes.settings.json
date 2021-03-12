@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partes",
+  "info": {
+    "name": "partes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "fecha": {
+      "type": "date"
+    },
+    "inicio": {
+      "type": "time"
+    },
+    "final": {
+      "type": "time"
+    },
+    "observaciones": {
+      "type": "text"
+    },
+    "imagenes": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "partes"
+    },
+    "capitulo": {
+      "model": "capitulos",
+      "via": "partes"
+    },
+    "tarea": {
+      "model": "tareas"
+    }
+  }
+}

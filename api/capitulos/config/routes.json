@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/capitulos",
+      "handler": "capitulos.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/capitulos/count",
+      "handler": "capitulos.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/capitulos/:id",
+      "handler": "capitulos.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/capitulos",
+      "handler": "capitulos.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/capitulos/:id",
+      "handler": "capitulos.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/capitulos/:id",
+      "handler": "capitulos.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "capitulos",
+  "info": {
+    "name": "capitulos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "tiempoEstimado": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "proyecto": {
+      "via": "capitulos",
+      "model": "proyectos"
+    },
+    "partes": {
+      "via": "capitulo",
+      "collection": "partes"
+    }
+  }
+}
